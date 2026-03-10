@@ -63,6 +63,32 @@
             }
             return max;
         }
+
+        // funzione esercizio 5
+        static bool ControlloUguale(int[,] m)
+        {
+            bool controllo = false;
+            int x = 6;
+            for (int i = 0; i < m.GetLength(0); i++)
+            {
+                for ( int j=0; j < m.GetLength(1); j++)
+                {
+                    if (m[i, j] != x)
+                    {
+                        controllo = false;
+                        i = m.GetLength(0);
+                        j = m.GetLength(1);
+                    }
+                }
+                if (controllo == true )
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         static void Main(string[] args)
         {
             // esercizio 1
@@ -93,6 +119,8 @@
             int max = 0;
             Console.WriteLine(Massimo(m));
             Console.WriteLine();
+
+            // esercizio 5
 
 
 
